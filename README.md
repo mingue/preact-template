@@ -1,7 +1,7 @@
-# Pending
+# Preact template
 
-- Bring preact router
-- Bring sass compilation
-- Create git repo
-- Upload as template
-- Start hackig a proper app
+- Clean template for using preact
+- Using webpack for building
+- Typescript
+- Sass for styling
+- preact router for SPA

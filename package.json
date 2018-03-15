@@ -1,17 +1,20 @@
 {
-  "name": "financial-planner",
+  "name": "preact-template",
   "version": "0.0.1",
   "description": "",
   "main": "webpack.config.js",
   "dependencies": {
-    "node-sass": "^4.7.2",
     "preact": "^8.2.7",
-    "sass-loader": "^6.0.7",
-    "ts-loader": "^4.0.1",
-    "typescript": "^2.7.2",
-    "webpack": "^4.1.1"
+    "preact-router": "^2.6.0"
   },
   "devDependencies": {
+    "css-loader": "^0.28.10",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
+    "ts-loader": "^4.0.1",
+    "typescript": "^2.7.2",
+    "webpack": "^4.1.1",
     "webpack-cli": "^2.0.11",
     "webpack-dev-server": "^3.1.1"
   },
