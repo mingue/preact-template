@@ -1,16 +1,25 @@
 var path = require('path');
 
 module.exports = {
-    devtool: 'source-map',
+    devtool: 'cheap-module-eval-source-map',
     entry: './src/bootstrap.tsx',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     },
+    devServer: {
+        contentBase: './',
+        compress: true,
+        hot: true,
+        overlay: {
+            warnings: true,
+            errors: true
+        }
+    },
     module: {
         rules: [
             {
-                test: /\.scss?$/,
+                test: /\.(s*)css$/,
                 include: path.join(__dirname, '/src/'),
                 use: [
                     'style-loader',

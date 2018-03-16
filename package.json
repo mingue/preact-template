@@ -5,25 +5,34 @@
   "main": "webpack.config.js",
   "dependencies": {
     "preact": "^8.2.7",
-    "preact-router": "^2.6.0"
+    "preact-router": "^2.6.0",
+    "typestyle": "^1.7.2"
   },
   "devDependencies": {
+    "@types/chai": "^4.1.2",
+    "@types/mocha": "^2.2.48",
+    "chai": "^4.1.2",
+    "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.10",
+    "html-webpack-plugin": "^3.0.6",
+    "mocha": "^5.0.4",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
     "ts-loader": "^4.0.1",
+    "ts-node": "^5.0.1",
     "typescript": "^2.7.2",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.11",
     "webpack-dev-server": "^3.1.1"
   },
   "scripts": {
-    "build:dev": "webpack --mode development",
+    "build": "webpack --mode development",
     "build:prod": "webpack --mode production",
-    "dev": "webpack --mode development && webpack-dev-server --mode development --open",
-    "prod": "webpack --mode production && webpack-dev-server --mode production --open"
+    "start": "webpack --mode development && webpack-dev-server --mode development --open",
+    "start:prod": "webpack-dev-server --mode production --open",
+    "test": "mocha -r ts-node/register tests/**/*.specs.ts"
   },
   "author": "Victor Mingueza <victormingueza@gmail.com>",
-  "license": "ISC"
+  "license": "MIT"
 }
