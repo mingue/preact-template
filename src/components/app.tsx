@@ -1,18 +1,22 @@
-import { h, Component } from 'preact';
-import Router from 'preact-router';
-import Header from './header/Header';
-import Page1 from '../routes/page1';
-import Page2 from '../routes/page2';
+import { h, Component } from "preact";
+import Router from "preact-router";
+import Header from "./header/Header";
+import Page1 from "../routes/page1";
+import Page2 from "../routes/page2";
 import { style, classes } from "typestyle";
 
 const containerWrapper =  style({
-    padding: '2rem'
+    padding: "2rem",
+    marginTop: "4rem"
 });
 
-export default class App extends Component<any, any> {    
+export default class App extends Component<any, any> {
+    componentDidMount() {
+        console.log(this.context);
+    }
     render() {
         return (
-            <div class={classes(containerWrapper, 'container')}>
+            <div class={classes(containerWrapper, "container")}>
                 <Header/>
                 <Router>
                     <div default class="columns">

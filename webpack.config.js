@@ -1,14 +1,14 @@
 var path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
-    devtool: 'cheap-module-eval-source-map',
     entry: './src/bootstrap.tsx',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     },
     devServer: {
-        contentBase: './',
+        contentBase: './dist/',
         compress: true,
         hot: true,
         overlay: {
@@ -35,10 +35,6 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.css', '.scss', '.ts', '.tsx', '.js'],
-        alias: {
-            'react': 'preact-compat',
-            'react-dom': 'preact-compat'
-        }
+        extensions: ['.css', '.scss', '.ts', '.tsx', '.js']
     }
 }
