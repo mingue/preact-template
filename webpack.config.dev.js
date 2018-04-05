@@ -1,4 +1,4 @@
-var path = require('path');
+const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const common = require('./webpack.config.js');
@@ -8,11 +8,12 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = merge(common,{
     devtool: 'cheap-module-eval-source-map',
     plugins: [
+        new webpack.WatchIgnorePlugin([/\.d\.ts$/]),
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
           template: './src/index.html'
         }),
         new webpack.NamedModulesPlugin(),
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
       ],
 });

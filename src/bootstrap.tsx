@@ -1,5 +1,5 @@
 import { h, render } from "preact";
-import App from "./components/app";
+import App from "./components/app/app";
 import { EventBus, IEventBus } from "./domain/EventBus";
 import Provider from "preact-context-provider";
 

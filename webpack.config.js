@@ -1,4 +1,4 @@
-var path = require('path');
+const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
@@ -23,7 +23,7 @@ module.exports = {
                 include: path.join(__dirname, '/src/'),
                 use: [
                     'style-loader',
-                    'css-loader',
+                    'typings-for-css-modules-loader?modules&namedExport&camelCase',
                     'sass-loader'
                 ]
             },
