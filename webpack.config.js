@@ -1,5 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     entry: './src/bootstrap.tsx',
@@ -34,6 +36,15 @@ module.exports = {
             }
         ]
     },
+    plugins: [
+        new webpack.WatchIgnorePlugin([/\.d\.ts$/]),
+        new CleanWebpackPlugin(['dist']),
+        new HtmlWebpackPlugin({
+          template: './src/index.html'
+        }),
+        new webpack.NamedModulesPlugin(),
+        new webpack.HotModuleReplacementPlugin(),
+    ],
     resolve: {
         extensions: ['.css', '.scss', '.ts', '.tsx', '.js']
     }

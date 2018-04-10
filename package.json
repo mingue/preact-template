@@ -7,7 +7,8 @@
     "preact": "^8.2.7",
     "preact-context-provider": "^1.1.1",
     "preact-router": "^2.6.0",
-    "typestyle": "^1.7.2"
+    "typestyle": "^1.7.2",
+    "typed-event-bus": "^1.0.2"
   },
   "devDependencies": {
     "@types/chai": "^4.1.2",

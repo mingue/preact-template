@@ -1,6 +1,6 @@
 import { h, render } from "preact";
 import App from "./components/app/app";
-import { EventBus, IEventBus } from "./domain/EventBus";
+import { EventBus, IEventBus } from "typed-event-bus";
 import Provider from "preact-context-provider";
 
 interface IAppContext {
